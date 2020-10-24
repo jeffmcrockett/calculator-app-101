@@ -1,10 +1,53 @@
+let firstNum = null
+let secondNum = null
+let operation = null
 
 const insert = (number) => {
   let display = document.getElementById("display")
   display.value += number
 }
 
+const saveFirstNumber = (num) => {
+  firstNum = parseInt(num)
+}
 
+const changeOperation = (chosenOperation) => {
+  if(firstNum) equals()
+  let value = document.getElementById("display").value
+  firstNum = parseInt(value)
+  document.getElementById("display").value=null
+  operation = chosenOperation
+  console.log(operation)
+}
+
+const add = (numA, numB) => {
+  const sum = numA + numB
+  console.log ("add", sum)
+  return sum
+}
+
+const putResultInElement = (operationResults) => {
+  document.getElementById("display").value = operationResults
+}
+
+const equals = () => {
+  let value = document.getElementById("display").value
+  secondNum = parseInt(value)
+  document.getElementById("display").value=null
+  switch (operation) {
+    case "addition":  putResultInElement(add(firstNum, secondNum)) 
+    break;
+    case "subtraction": putResultInElement(subtract(firstNum, secondNum)) 
+    break;
+    case "multiplication": putResultInElement(multiply(firstNum, secondNum)) 
+    break;
+    case "division": putResultInElement(divide(firstNum, secondNum)) 
+    break;
+    case "modulus": putResultInElement(modulus(firstNum, secondNum)) 
+    break;
+    default: "Choose an operation"
+  }
+}
 
 
 
