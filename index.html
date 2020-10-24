@@ -4,29 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/7669fbb5fa.js" crossorigin="anonymous"></script>
   <script src="main.js"></script>
-  <title>Document</title>
+  <title>Calculator</title>
 </head>
 <body>
-  <form class="calculator">
-    <label for="first-number">First Number:</label>
-    <!-- the "onkeyup" event listener passes its input's "value" to the "saveFirstNumber" function in the main.js file -->
-    <input type="number" id="first-Number" name="first-Number" placeholder="type the first number" value="" onkeyup="saveFirstNumber(this.value)">
-    <label for="second-number">Second Number:</label>
-    <input type="number" id="second-Number" name="second-Number" placeholder="type the second number" onkeyup="saveSecondNumber(this.value)">
-    <div>
-      <!-- the "onclick" event listener passes its element's "id" to the "changeOperation" function in the main.js file -->
-      <button type="button" name="add" id="addition" onclick="changeOperation(this.id)">Add</button>
-      <button type="button" name="subtract" id="subtraction" onclick="changeOperation(this.id)">Subtract</button>
-      <button type="button" name="multiply" id="multiplication" onclick="changeOperation(this.id)">Multiply</button>
-      <button type="button" name="divide" id="division" onclick="changeOperation(this.id)">Divide</button>
-      <button type="button" name="modulus" id="modulus" onclick="changeOperation(this.id)">Modulus</button>
+  <h1>TI-89 JS EDITION</h1>
+  <div class="container">
+    <form name="form">
+      <input class="textview" id="display">
+    </form>
+    <table>
+        <tr>
+          <td><input class="button" type="button" value="C"></td>
+          <td><input class="button" type="button" value="<"></td>
+          <td><input class="button" type="button" value="/" onclick="insert('/')"></td>
+          <td><input class="button" type="button" value="x" onclick="insert('*')"></td>
+        </tr>
+        <tr>
+          <td><input class="button" type="button" value="7" onclick="insert(7)"></td>
+          <td><input class="button" type="button" value="8" onclick="insert(8)"></td>
+          <td><input class="button" type="button" value="9" onclick="insert(9)"></td>
+          <td><input class="button" type="button" value="-" onclick="insert('-')"></td>
+        </tr>
+        <tr>
+          <td><input class="button" type="button" value="4" onclick="insert(4)"></td>
+          <td><input class="button" type="button" value="5" onclick="insert(5)"></td>
+          <td><input class="button" type="button" value="6" onclick="insert(6)"></td>
+          <td><input class="button" type="button" value="+" onclick="insert('+')"></td>
+        </tr>
+        <tr>
+          <td><input class="button" type="button" value="1" onclick="insert(1)"></td>
+          <td><input class="button" type="button" value="2" onclick="insert(2)"></td>
+          <td><input class="button" type="button" value="3" onclick="insert(3)"></td>
+          <td><input class="button" type="button" value="=" onclick="equal()" ></td>
+        </tr>
+        <tr>
+          <td><input class="button" type="button" value="0" onclick="insert(0)"></td>
+          <td><input class="button" type="button" value="." onclick="insert('.')"></td>
+          <td></td>
+          <td><i id="empire" class="fab fa-empire"></i></td>
+        </tr>
+    </table>
+<!--    <div class="equationbuttons">
+      <button class="addbutton" type="button" name="add" id="addition" onclick="changeOperation(this.id)">Add</button>
+      <button class="minusbutton" type="button" name="subtract" id="subtraction" onclick="changeOperation(this.id)">Subtract</button>
+      <button class="timesbutton" type="button" name="multiply" id="multiplication" onclick="changeOperation(this.id)">Multiply</button>
+      <button class="dividebutton" type="button" name="divide" id="division" onclick="changeOperation(this.id)">Divide</button>
+      <button class="modbutton" type="button" name="modulus" id="modulus" onclick="changeOperation(this.id)">Modulus</button>
+    </div><br><br><br>
+    <div class="finishingbuttons">
+      <button type="button" class="equals" onclick="equals()">Equals</button>
+      <button type="reset" class="clear">Clear</button>
     </div>
-    <br>
-    <!-- this "onclick" calls the "equal" function in the main.js file -->
-    <button type="button" onclick="equals()">Equals</button>
-    <button type="reset">Clear</button>
-  </form>
-  <div id="result"></div>
+    <div class="theresult" id="result"></div>
+  </div>         -->
 </body>
 </html>
