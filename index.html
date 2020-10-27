@@ -16,9 +16,9 @@
     </form>
     <table>
         <tr>
-          <td><input class="button" type="button" value="C"></td>
-          <td><input class="button" type="button" value="<"></td>
-          <td><input class="button" type="button" value="/" onclick="insert('/')"></td>
+          <td><input class="button" type="button" value="C" onClick="window.location.href=window.location.href"></td>
+          <td><input class="button" type="button" name="modulus" id="modulus" onclick="changeOperation(this.id)" value="<" ></td>
+          <td><input class="button" type="button" name="divide" id="division" onclick="changeOperation(this.id)" value="+"></td>
           <td><input class="button" type="button" name="multiply" id="multiplication" onclick="changeOperation(this.id)" value="x"></td>
         </tr>
         <tr>

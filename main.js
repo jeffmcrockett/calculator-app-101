@@ -26,6 +26,26 @@ const add = (numA, numB) => {
   return sum
 }
 
+const subtract = (numA, numB) => {
+  const difference = numA - numB
+  return difference
+}
+
+const multiply = (numA, numB) => {
+  const product = numA * numB
+  return product
+}
+
+const divide = (numA, numB) => {
+  const quotient = numA / numB
+  return quotient
+}
+
+const modulus = (numA, numB) => {
+  const remainder = numA % numB
+  return remainder
+}
+
 const putResultInElement = (operationResults) => {
   document.getElementById("display").value = operationResults
 }
